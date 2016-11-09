@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+option java_package = "com.example.vedhn.demofcm.protobuf";
+package vedfcm;
+
+//import "device.proto";
+
+service Device {
+    rpc Register(DeviceInfo) returns (DeviceInfo) {}
+    rpc Login(LoginRequest) returns (LoginResponse) {}
+    rpc Logout(LoginRequest) returns (LoginResponse) {}
+
+    rpc SubscribeStream(StreamSubscription) returns(NoneResponse) {}
+    rpc UnsubscribeStream(StreamSubscription) returns(NoneResponse) {}
+}
+
+message DeviceInfo {
+    string iid_token = 1;
+}
+
+message LoginRequest {
+    string iid_token = 1;
+    string api_token = 2;
+}
+
+message LoginResponse {}
+
+message NoneResponse {}
+
+message StreamSubscription {
+    string iid_token = 1;
+    string stream_id = 2;
+}
+
+//service StreamMessage {
+//    rpc SendToStream(StreamMessage) returns (NoneResponse) {}
+////    rpc SendToUser(UserMessage) returns (NoneResponse) {}
+//}
+
+service Message {
+    rpc SendByStream(SendToStreamMessage) returns (NoneResponse) {}
+}
+
+message SendToStreamMessage {
+    string stream_id = 1;
+    MessagePayload payload = 20;
+}
+
+message MessagePayload {
+    // See more at https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream-http-messages-plain-text
+    message Notification {
+        // web
+        string title = 1;
+        string body = 2;
+        string icon = 3;
+        string click_action = 4;
+
+        // Android
+        string sound = 20;
+        string tag = 21;
+        string body_loc_key = 22;
+        string body_loc_args = 23;
+        string title_loc_key = 24;
+        string title_loc_args = 25;
+
+        // iOs
+        string badge = 40;
+    }
+
+    string data = 20; // JSON encoded (a dict) for data to send to devices
+}
