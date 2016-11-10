@@ -11,8 +11,78 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vedhn.demogrpc.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnSubscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Subscribe"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btnUnsubscibe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btnSubscribe"
+        android:layout_toRightOf="@+id/btnSubscribe"
+        android:text="Unsubscribe"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnSubscribe"
+        android:layout_marginTop="18dp"
+        android:text="Result"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnSendByStream"
+        android:layout_marginTop="26dp"
+        android:text="Result"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnSendByStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="153dp"
+        android:text="Send by Stream"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/textViewResult1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="14dp"
+        android:text="..."/>
+
+    <TextView
+        android:id="@+id/textViewResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:text="..."/>
+
 </RelativeLayout>

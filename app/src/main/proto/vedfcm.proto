@@ -68,4 +68,5 @@ message MessagePayload {
     }
 
     string data = 20; // JSON encoded (a dict) for data to send to devices
+    Notification notification = 21;
 }

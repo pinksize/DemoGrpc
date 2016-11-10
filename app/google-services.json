@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "880329924606",
+    "firebase_url": "https://vst-msg.firebaseio.com",
+    "project_id": "vst-msg",
+    "storage_bucket": "vst-msg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880329924606:android:84971ce801151ffb",
+        "android_client_info": {
+          "package_name": "com.example.vedhn.demogrpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880329924606-s0u6iho80j902plmo9in7ft4qmb55m4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vedhn.demogrpc",
+            "certificate_hash": "8D55CEE1B7F8BCD4E6194B395439B30DE9270AF1"
+          }
+        },
+        {
+          "client_id": "880329924606-j7e09rtkos68egjv33a595jsr1o5pch0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf0AAem47OcEA0g2YMUahKdR9Pz8nxLqE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880329924606-j7e09rtkos68egjv33a595jsr1o5pch0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "880329924606-61rjaouhggnp43susf04av2g8d21md3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zigma.Cube"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
